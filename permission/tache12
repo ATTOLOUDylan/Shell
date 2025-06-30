@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# Script pour jouer Star Wars épisode IV en ASCII via telnet
+
+# Vérifie si telnet est installé
+if ! command -v telnet &> /dev/null
+then
+    echo "Telnet n'est pas installé. Installation en cours..."
+    sudo apt update
+    sudo apt install -y telnet
+fi
+
+# Lance la lecture de Star Wars via le serveur towel.blinkenlights.nl
+echo "Lecture de Star Wars épisode IV en ASCII..."
+telnet towel.blinkenlights.nl
